@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factura Electrónica (CFDI 4.0)</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h2>Factura Electrónica (CFDI 4.0)</h2>
+
+  <table>
+    <tr>
+      <th>Serie:</th>
+      <td>{SERIE}</td>
+      <th>Folio:</th>
+      <td>{FOLIO}</td>
+    </tr>
+    <tr>
+      <th>Fecha:</th>
+      <td>{FECHA}</td>
+      <th>Forma de Pago:</th>
+      <td>{FORMA_PAGO}</td>
+    </tr>
+  </table>
+
+  <h3>Emisor</h3>
+  <table>
+    <tr>
+      <th>Nombre:</th>
+      <td>{EMISOR_NOMBRE}</td>
+    </tr>
+    <tr>
+      <th>RFC:</th>
+      <td>{EMISOR_RFC}</td>
+    </tr>
+  </table>
+
+  <h3>Receptor</h3>
+  <table>
+    <tr>
+      <th>Nombre:</th>
+      <td>{RECEPTOR_NOMBRE}</td>
+    </tr>
+    <tr>
+      <th>RFC:</th>
+      <td>{RECEPTOR_RFC}</td>
+    </tr>
+  </table>
+
+  <h3>Conceptos</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Descripción</th>
+        <th>Cantidad</th>
+        <th>Unidad</th>
+        <th>Valor Unitario</th>
+        <th>Importe</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Los conceptos se insertarán aquí -->
+    </tbody>
+  </table>
+
+  <h3>Totales</h3> 
+  <table>
+    <tr>
+      <th>Subtotal:</th>
+      <td>{SUBTOTAL}</td>
+    </tr>
+    <tr>
+      <th>IVA:</th>
+      <td>{IVA}</td> 
+    </tr>
+    <tr>
+      <th>Retenciones:</th>
+      <td>{RETENCIONES}</td> 
+    </tr>
+    <tr>
+      <th>Total:</th>
+      <td>{TOTAL}</td>
+    </tr>
+  </table>
+</body>
+</html>

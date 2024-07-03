@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizador CFDI</title>
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .sidebar {
+      width: 30%;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+    }
+
+    .viewer {
+      width: 70%;
+      padding: 20px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h1>Visualizador CFDI</h1>
+
+    <input type="file" id="fileInput" multiple accept=".xml">
+
+    <table id="cfdi-table">
+      <thead>
+        <tr>
+          <th>Nombre del Archivo</th>
+          <th>Emisor</th>
+          <th>Tipo/Versión</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aquí se listarán los archivos -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="viewer" id="cfdi-viewer">
+    <!-- Aquí se mostrará la representación impresa del CFDI -->
+    <p>Selecciona un CFDI para visualizar su contenido.</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
